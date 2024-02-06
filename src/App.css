@@ -1,3 +1,4 @@
+@import url("https://fonts.google.com/specimen/Protest+Riot");
 .App {
   text-align: center;
 }
@@ -35,4 +36,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.heading{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 15vh;
+}
+
+.heading h1{
+  font-size: 75px;
+  font-family:'Protest Riot' ;
 }
