@@ -1,4 +1,3 @@
-@import url("https://fonts.google.com/specimen/Protest+Riot");
 .App {
   text-align: center;
 }
@@ -38,6 +37,9 @@
   }
 }
 
+.returnApp{
+  background-color: black;
+}
 .heading{
   display: flex;
   justify-content: center;
@@ -48,10 +50,36 @@
 .heading h1{
   font-size: 75px;
   font-family:'Protest Riot' ;
+  color: #00ffe9;
 }
 
 .searching{
   display: flex;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 100px;
+  height: 10vh;
+}
+
+.searching button{
+  width: 40vh;
+  color: #00ffe9;
+  font-size: 65px;
+  box-shadow: #00ffce;
+  border-radius:30px
+}
+
+.searching button:hover{
+
+  background-color: #00ffce;
+  transition: 0.8s;
+}
+
+.searching .inputPart{
+
+  font-size: 30px;
+  width: 90vh;
+  border-radius: 30px;
+  background-color: #282c34;
+  border-color: #282c34;
 }

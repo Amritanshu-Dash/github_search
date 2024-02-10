@@ -4,10 +4,10 @@ import Search from './components/search';
 
 function App() {
   return (
-    <>
+    <div className='returnApp'>
       <Heading/>
       <Search/>
-    </>
+    </div>
   );
 }
 
