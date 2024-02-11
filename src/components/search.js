@@ -1,19 +1,18 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { RiSearchEyeLine } from "react-icons/ri";
 
-export default function search() {
+export default function search({ onSubmit, onChange, value }) {
   return (
-    <div className='searching'>
-      <InputGroup className="mb-3">
-          <Button className='button' variant="outline-secondary" id="button-addon">
-            <RiSearchEyeLine />
-          </Button>
-          <input className="inputPart" type="text" placeholder="Let's search..." />
-        </InputGroup>
-    </div>
-  )
+    <form className="search-form" onSubmit={onSubmit}>
+      <input
+        id="search"
+        type="text"
+        placeholder="Enter username or email"
+        onChange={onChange}
+        value={value}
+      />
+      <div className='searchingButton'><button type="submit"><RiSearchEyeLine/></button></div>
+    </form>
+  );
 }
