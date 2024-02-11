@@ -25,13 +25,13 @@ function App() {
   function onSearchChange(event) {
     setQuery(event.target.value);
   }
-  
+
   async function onSearchSubmit(event) {
     event.preventDefault();
     const results = await fetchResults(query);
     setResults(results);
   }
- 
+
 
   return (
 
@@ -40,7 +40,6 @@ function App() {
       <Heading />
 
       <main className="main">
-
         <div className="search">
           <Search
             onChange={onSearchChange}
@@ -48,25 +47,18 @@ function App() {
             value={query}
           />
         </div>
-
-        <div id="results">
-
-          <div>
-
-            {results.map((user) => (
-              <User
-                key={user.login}
-                avatar={user.avatar_url}
-                url={user.html_url}
-                username={user.login}
-              />
-            ))}
-            
-          </div>
-
-        </div>
-
       </main>
+
+      <div id="results">
+        {results.map((user) => (
+          <User
+            key={user.login}
+            avatar={user.avatar_url}
+            url={user.html_url}
+            username={user.login}
+          />
+        ))}
+      </div>
 
     </div>
 

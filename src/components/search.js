@@ -5,14 +5,16 @@ import { RiSearchEyeLine } from "react-icons/ri";
 export default function search({ onSubmit, onChange, value }) {
   return (
     <form className="search-form" onSubmit={onSubmit}>
-      <input
+      <input className='inputDim'
         id="search"
         type="text"
         placeholder="Enter username or email"
         onChange={onChange}
         value={value}
       />
-      <div className='searchingButton'><button type="submit"><RiSearchEyeLine/></button></div>
+      <button className='searchingButton' type="submit"><RiSearchEyeLine/></button>
     </form>
   );
 }
+
+
